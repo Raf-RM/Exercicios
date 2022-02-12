@@ -56,7 +56,7 @@ print(ano_em_romano(1440))
 print(ano_em_romano(1358))
 print(ano_em_romano(1880))
 
-# -- Uma maneira legal e mais cucinta seria aplicando a função sorted() que pode atuar sobre 
+# -- Uma maneira legal e mais sucinta seria aplicando a função sorted() que pode atuar sobre 
 #    qualquer iterável e utilizando a flag reverse = True para realizarmos uma ordenação descendente
 
 def solution(n):

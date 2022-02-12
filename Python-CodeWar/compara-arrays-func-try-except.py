@@ -30,7 +30,7 @@ def comp(array1, array2):
 
 def comp(array1, array2):
     try:
-        # return sprted([i ** 2 for i in array1]) == sorted(array2)
+        # return sorted([i ** 2 for i in array1]) == sorted(array2)
         return sorted([i * i for i in array1]) == sorted(array2)
     except:
         return False
