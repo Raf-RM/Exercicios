@@ -135,15 +135,24 @@ class Connector:
 #main()
 
 def main():
-   g1 = AndGate("G1")
-   g2 = AndGate("G2")
-   g5 = NorGate('G5')
-   g6 = NandGate('G6')
-   c1 = Connector(g1,g5)
-   c2 = Connector(g2,g5)
-   c3 = Connector(g1,g6)
-   c4 = Connector(g2,g6)
-   print(g6.getOutput())
+   g1 = NandGate("G1")
+   g2 = NandGate("G2")
+   g3 = AndGate('G3')
+
+   g4 = AndGate('G4')
+   g5 = AndGate('G5')
+   g6 = NorGate('G6')
+
+   g7 = AndGate('G7')
+
+   c1 = Connector(g1,g3)
+   c2 = Connector(g2,g3)
+   c3 = Connector(g3,g7)
+
+   c4 = Connector(g4,g6)
+   c4 = Connector(g5,g6)
+   c4 = Connector(g6,g7)
+   print(g7.getOutput())
 
 main()
     
