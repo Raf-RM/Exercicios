@@ -3,9 +3,16 @@
 class Fraction:
     def __init__(self, numerador, denominador):
 # -- Para reduzir as frações vamos contruir um método que calcule o MDC 
-        if type(numerador) == type(denominador) == int:       
-            a = numerador
-            b = denominador
+        if type(numerador) == type(denominador) == int:
+            if numerador < 0 and denominador < 0:
+                a = abs(numerador)
+                b = abs(denominador)
+            elif numerador >= 0 and denominador < 0:
+                a = - numerador
+                b = abs(denominador) 
+            else:
+                a = - numerador
+                b = denominador                                
             while a%b != 0:
                 a_velho = a
                 b_velho = b
@@ -90,7 +97,7 @@ myFraction.show()
 print(myFraction)
 print('Eu comprei', myFraction,'das ações da empresa!')
 
-f1 = Fraction(3,4)
+f1 = Fraction(-3,-4)
 f2 = Fraction(1,2)
 f3 = f1.__add__(f2)
 f5 = f1 + f2
@@ -123,5 +130,7 @@ print('f14 =', f14)
 print('f15 =', f15)
 print('f16 =', f16)
 print('Numerador = ',f1.getNum(),'e Denominador =',f1.getDen())
+
+
 
 f1 = Fraction(0.5,8)
